@@ -54,22 +54,39 @@ int main()
     }
     
     //search
-    
-    cout<<"which number do you want to search?"<<endl;
-    int search,var=0,num;
-    cin>>search;
-    for(int i=0;i<10;i++)
-    {
-        if (search==arr[i])
+    int condition=0;
+    char ans;
+    cout<<"Do you wanty to search for a number?"<<endl<<"y for yes and n for no"<<endl;
+    cin>>ans;
+    if(ans=='y'||ans=='Y')
         {
-        var++;
-        num=i+1;
+        do{
+        cout<<"which number do you want to search?"<<endl;
+        int search,var=0,num;
+        cin>>search;
+        for(int i=0;i<10;i++)
+        {
+            if (search==arr[i])
+            {
+            var++;
+            num=i+1;
+            }
         }
+        if (var==0)
+        cout<<"Number not found";
+        else
+        cout<<"the number "<<search<<" found at "<<num<<" place";
+        cout<<"Do you wanna search for another number?"<<endl<<"Press any number for yes and 1 for no"<<endl;
+        cin>>condition; 
+        }
+        while(condition!=1);
+        }
+    else if(ans=='n'||ans=='N')
+    {
+        cout<<"okay!";
     }
-    if (var==0)
-    cout<<"Number not found";
     else
-    cout<<"the number "<<search<<" found at "<<num<<" place";
+    cout<<"Wrong input";
     return 0;
 }
 
