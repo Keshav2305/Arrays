@@ -64,5 +64,5 @@ We try to use array to do some simple tasks like;
 4. To search for numbers</br>
    We use another for loop and compare balues until we fin d the required value, if not we print that the vales are not found.
 ## Output Screenshot
-![Output SS]()
+![Output SS](image_2023-10-21_191640012.png)
    
